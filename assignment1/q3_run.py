@@ -42,6 +42,7 @@ wordVectors = sgd(
 print "sanity check: cost at convergence should be around or below 10"
 print "training took %d seconds" % (time.time() - startTime)
 
+
 # concatenate the input and output word vectors
 wordVectors = np.concatenate(
     (wordVectors[:nWords,:], wordVectors[nWords:,:]),
