@@ -52,13 +52,13 @@ def test_all_close(name, actual, expected):
     if np.amax(np.fabs(actual - expected)) > 1e-6:
         raise ValueError("{:} failed, expected {:} but value is {:}".format(name, expected, actual))
     else:
-        print name, "passed!"
+        print(name, "passed!")
 
 
 def logged_loop(iterable, n=None):
     if n is None:
         n = len(iterable)
-    step = max(1, n / 1000)
+    step = max(1, n // 1000)
     prog = Progbar(n)
     for i, elem in enumerate(iterable):
         if i % step == 0 or i == n - 1:
